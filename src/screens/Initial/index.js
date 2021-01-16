@@ -5,6 +5,8 @@ import { Creators as initialActions } from "../../store/ducks/initial";
 
 import InitialContainer from '../../containers/Initial';
 
+import * as S from './styled';
+
 const InitialScreen = () => {
     const dispatch = useDispatch();
     const data = useSelector(state => state.initial);
@@ -15,9 +17,9 @@ const InitialScreen = () => {
         requestScreen();
     },[]);
     return(
-        <div>
+        <S.Wrapper bg={data.mock.initialImage}>
             <InitialContainer title={data.mock.title} buttons={data.mock.buttons}/>
-        </div>
+        </S.Wrapper>
     );
 }
 

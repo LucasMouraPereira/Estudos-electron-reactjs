@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import * as S from './styled';
+
 const Button = ({ text, type, value, onClick, customButton }) => (
-  <div customButton={customButton}>
+  <S.WrapperButton customButton={customButton}>
     <button 
       type={type} 
       value={value} 
@@ -10,7 +12,7 @@ const Button = ({ text, type, value, onClick, customButton }) => (
     >
       {text}
     </button>
-  </div>
+  </S.WrapperButton>
 );
 
 Button.propTypes = {

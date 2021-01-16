@@ -2,8 +2,11 @@ import { takeLatest, put } from "redux-saga/effects";
 import { Types as Actions } from "../../ducks/initial";
 import initialData from "../../../data/mocks/initialData";
 
+import api from '../../../server/api';
+
 function* requestInitial() {
     try {
+        console.log(api)
         const data = {
             mock: initialData,
         };
