@@ -6,12 +6,14 @@ import * as S from './styled';
 
 const NarrativeBox = ({ text }) => {
     return(
-        <div>Oi! eu sou o Lucas</div>
+        <S.WrapperText>
+            <S.Text>{ text }</S.Text>
+        </S.WrapperText>
     )
 }
 
 NarrativeBox.propTypes = {
-    dialog: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
 };
 
 export default NarrativeBox;

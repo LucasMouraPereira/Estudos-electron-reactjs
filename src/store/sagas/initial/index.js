@@ -2,17 +2,30 @@ import { takeLatest, put } from "redux-saga/effects";
 import { Types as Actions } from "../../ducks/initial";
 import initialData from "../../../data/mocks/initialData";
 
-import api from '../../../server/api';
-
-function* requestInitial() {
+function* requestInitial({ language }) {
     try {
-        console.log(api)
         const data = {
-            mock: initialData,
+            "en-us": {
+                background: initialData.initialImage,
+                language: language,
+                mock: initialData.english,
+            },
+            "pt-br": {
+                background: initialData.initialImage,
+                language: language,
+                mock: initialData.portuguese,
+            },
+            "es-es": {
+                background: initialData.initialImage,
+                language: language,
+                mock: initialData.spanish
+            }
         };
+
+        const payload = data[language] || { language: language, data: {} };
         yield put({
             type: Actions.REQUEST_INITIAL_SUCCESS,
-            data,
+            payload,
         })
     } catch (err) {
         const { error } = err?.response?.data;

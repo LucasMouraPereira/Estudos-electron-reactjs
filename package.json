@@ -4,6 +4,7 @@
   "private": true,
   "main": "src/server/main.js",
   "dependencies": {
+    "@craco/craco": "^6.0.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -24,11 +25,11 @@
   },
   "scripts": {
     "electron": "electron .",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "dev": "concurrently \"react-scripts start\" \"electron .\""
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "craco eject",
+    "dev": "concurrently \"craco start\" \"electron .\""
   },
   "eslintConfig": {
     "extends": [

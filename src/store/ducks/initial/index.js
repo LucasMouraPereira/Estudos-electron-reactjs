@@ -1,24 +1,28 @@
 import {createActions, createReducer} from "reduxsauce";
 
 export const { Creators, Types } = createActions({
-    requestInitial: [],
+    requestInitial: ["language"],
     requestInitialSuccess: ["payload", "isLoading"],
     requestInitialFail: ["error", "isLoading"]
 });
 
 const INITIAL_STATE = {
     isLoading: false,
+    background: "",
+    language: "",
     mock: {},
 };
 
-const requestInitial = () => ({
-    ...INITIAL_STATE,
+const requestInitial = (state) => ({
+    ...state,
     isLoading: true,
 });
 
-const requestInitialSuccess = (state, { data }) => ({
+const requestInitialSuccess = (state, { payload: { background, language, mock } }) => ({
     ...state,
-    mock: data.mock
+    background,
+    language,
+    mock
 });
 
 const requestInitialFail = (state, error) => ({

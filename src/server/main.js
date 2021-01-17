@@ -10,9 +10,12 @@ function createWindow () {
       minHeight: 736,
       webPreferences: {
          nodeIntegration: true,
+         enableRemoteModule:true,
       }
    });
+
    win.loadURL("http://localhost:3000");
+   
    contents = win.webContents;
 }
 
