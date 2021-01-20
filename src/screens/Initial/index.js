@@ -9,7 +9,7 @@ import * as S from './styled';
 
 const InitialScreen = () => {
     const dispatch = useDispatch();
-    const [language, setLanguage] = useState(globalData.languages[0]);
+    const [language, setLanguage] = useState(globalData.languages[1]);
     const data = useSelector(state => state.initial);
     const requestScreen = async (language) => {
         dispatch(await initialActions.requestInitial(language));

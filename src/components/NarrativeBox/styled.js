@@ -4,6 +4,7 @@ export const WrapperText = styled.div`
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    opacity: 10;
 `;
 
 export const Text = styled.div`
@@ -21,4 +22,11 @@ export const Text = styled.div`
     font-size: 16px;
     line-height: 21px;
     box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.5);
+    & span {
+        /* opacity: 0; */
+        & .revealed { 
+            opacity: 1;
+        }
+    }
+
 `;

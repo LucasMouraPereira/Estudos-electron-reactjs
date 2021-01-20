@@ -34,6 +34,7 @@ const Initial = ({ title, buttons, renderLanguage }) => {
   const routeChange = (id) => {
     if (id !== "5" && id !== "3") {
       history.push(path[id], { from: "InitialScreen" });
+      
     }
   };
   const exitWin = (id) => {
