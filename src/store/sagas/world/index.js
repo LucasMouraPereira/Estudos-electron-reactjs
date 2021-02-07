@@ -7,16 +7,19 @@ function* requestWorld({ language }) {
         const data = {
             "en-us": {
                 language: language,
+                header: worldData.header,
                 aside: worldData.aside,
                 footer: worldData.footer
             },
             "pt-br": {
                 language: language,
+                header: worldData.header,
                 aside: worldData.aside,
                 footer: worldData.footer
             },
             "es-es": {
                 language: language,
+                header: worldData.header,
                 aside: worldData.aside,
                 footer: worldData.footer
             }

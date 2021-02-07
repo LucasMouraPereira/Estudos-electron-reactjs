@@ -12,9 +12,11 @@ import Vitoriana from "../fonts/Victoriana/victoriana.ttf";
 const GlobalStyle = createGlobalStyle`
     :root {
         --color-white-1: #ffffff;
+        --color-grey-1: #C7C7C7;
         --color-black-1: #000000;
         --color-yellow-1: #cdb35b;
         --color-yellow-2: #b29c5b;
+        --color-yellow-3: #edbf37;
         --color-red-1: #701b19;
     }
     * {

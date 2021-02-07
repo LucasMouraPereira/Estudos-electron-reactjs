@@ -9,6 +9,7 @@ export const { Creators, Types } = createActions({
 const INITIAL_STATE = {
     isLoading: false,
     language: "",
+    header: [],
     aside: [],
     footer: [],
 };
@@ -18,9 +19,10 @@ const requestWorld = (state) => ({
     isLoading: true,
 });
 
-const requestWorldSuccess = (state, { payload: { language, aside, footer } }) => ({
+const requestWorldSuccess = (state, { payload: { language, header, aside, footer } }) => ({
     ...state,
     language,
+    header,
     aside,
     footer,
 });
