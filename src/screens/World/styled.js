@@ -82,7 +82,11 @@ export const WrapperHeader = styled.div`
   width: 100%;
   max-width: 892px;
   display: flex;
-  /* flex-direction: row; */
+`;
+
+export const WrapperWorld = styled.div`
+  width: 100%;
+  display: flex;
 `;
 
 export const SlotPlayer = styled.div`

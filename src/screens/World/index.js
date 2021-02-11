@@ -10,7 +10,7 @@ import Heart from "../../components/Heart";
 import Portion from "../../components/Portion";
 
 import playPhoto from "../../assets/png/main/mainFront.png";
-// import WorldContainer from "../../containers/World";
+import WorldContainer from "../../containers/World";
 
 import Button from "../../components/Button";
 import * as S from "./styled";
@@ -83,7 +83,9 @@ const WorldScreen = () => {
               </S.WrapperBar>
             </S.WrapperStatus>
           </S.Header>
-          <div>{/* <WorldContainer renderLanguage={setLanguage} /> */}</div>
+          <S.WrapperWorld>
+            <WorldContainer />
+          </S.WrapperWorld>
         </S.WrapperGame>
       </S.Container>
       <S.Footer>

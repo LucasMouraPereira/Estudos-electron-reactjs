@@ -1,15 +1,14 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
-import Button from "../../components/Button";
-
+import Player from "../../components/Player";
+import * as S from "./styled";
 
 const World = () => {
-  const history = useHistory();
-  
   return (
-    <div>
-      <Button text="return" onClick={() => history.goBack()} />
-    </div>
+    <S.WrapperWorld>
+      <Player 
+        skin="mainCharacter"
+      />
+    </S.WrapperWorld>
   );
 };
 
